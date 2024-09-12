@@ -3,10 +3,10 @@ with open("../tolst.txt", 'r') as file:
 
 parts = lines.split('.')
 parts = [part.strip() for part in parts if part.strip()]
-print(parts[25577])
+print(parts[15977])
 print("------------------")
-print(parts[25886])
+print(parts[5006])
 print("------------------")
-print(parts[26303])
+print(parts[5577])
 print("------------------")
-print(parts[26311])
+print(parts[4948])

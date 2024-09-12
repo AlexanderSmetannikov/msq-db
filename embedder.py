@@ -11,8 +11,7 @@ import numpy as np
 #                 lines.extend(page_txt.split("\n"))
 #     return lines
 
-parts = ["За кого вышла замуж Наташа Ростова"]
-
+parts = ["Кому князь Василий был обязан своими первыми шагами по службе?"]
 # text = pdf_to_text("ch.pdf")
 # with open("tolst.txt", 'r') as file:
 #     lines = file.read()
