@@ -5,12 +5,14 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 from langchain_huggingface import HuggingFaceEmbeddings
 
-vectors = np.load("vecs.npy")
+vectors = np.load("../vecs.npy")
 print(vectors.shape)
 
 embeddings = HuggingFaceEmbeddings(model_name="deepvk/USER-bge-m3")
 index = faiss.IndexFlatL2(vectors.shape[1])
 
+res = faiss.StandardGpuResources()
+index = faiss.index_cpu_to_gpu(res, 0, index)
 index.add(vectors)
 
 documents = [
@@ -37,7 +39,7 @@ results = vec_store.similarity_search(
 for result in results:
     print(result)
 
-with open("tolst.txt", 'r') as file:
+with open("../tolst.txt", 'r') as file:
     lines = file.read()
 
 parts = lines.split('.')
