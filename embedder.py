@@ -10,7 +10,7 @@ import numpy as np
 #             if page_txt:
 #                 lines.extend(page_txt.split("\n"))
 #     return lines
-
+#
 parts = ["Кому князь Василий был обязан своими первыми шагами по службе?"]
 # text = pdf_to_text("ch.pdf")
 # with open("tolst.txt", 'r') as file:
