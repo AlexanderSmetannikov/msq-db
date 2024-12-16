@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     const char* input_pdf = argv[1];
     const char* output_txt = argv[2];
 
-    // Initialize Poppler
+    // 
     poppler::document* doc = poppler::document::load_from_file(input_pdf);
     if (!doc) {
         std::cerr << "Error: Could not open PDF file " << input_pdf << std::endl;
