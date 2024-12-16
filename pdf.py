@@ -27,6 +27,7 @@
 # # for page in text:
 # #     print(page)
 
+
 with open("tolst.txt", 'r') as file:
     lines = file.read()
 
