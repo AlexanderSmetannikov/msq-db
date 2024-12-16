@@ -7,7 +7,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 
 vectors = np.load("../vecs.npy")
 print(vectors.shape)
-
+#
 embeddings = HuggingFaceEmbeddings(model_name="deepvk/USER-bge-m3")
 index = faiss.IndexFlatL2(vectors.shape[1])
 
