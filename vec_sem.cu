@@ -2,7 +2,7 @@
 #include <cnpy.h>
 #include <cuda_runtime.h>
 #include <limits>
-// CUDA ядро для вычисления расстояний и нахождения ближайших соседей
+// CUDA ядро для вычисления расстояний и нахождения ближайших соседей.
 __global__ void find_nearest_neighbors(const float* query, const float* database, int* indices, float* distances, int num_db, int dim, int num_neighbors) {
     int db_idx = blockIdx.x * blockDim.x + threadIdx.x;
     if (db_idx < num_db) {
